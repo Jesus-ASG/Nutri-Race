@@ -35,11 +35,10 @@ public class PlayerMove : MonoBehaviour
 
         bonusSpeed = constant * Mathf.Sqrt(LevelDistance.disRun) + 1f;
         
-        if (canMove) //canMove
+        if (canMove)
         {
 
             float inputX = Input.GetAxisRaw("Horizontal");
-            
             if (inputX != 0 && !movingX)
             {
                 movingX = true;
@@ -50,12 +49,9 @@ public class PlayerMove : MonoBehaviour
 
                 transform.position = targetPosition;
                 StartCoroutine(delayXPlayerMovement());
-                ////StartCoroutine(movePlayerSmoothly(targetPosition));
-                
             }
 
             float inputY = Input.GetAxisRaw("Vertical");
-            
             if (inputY == 1)
             {
                 if (!isJumping)

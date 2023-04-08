@@ -12290,7 +12290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1072110578}
-  generateDistance: 400
+  generateDistance: 200
   section:
   - {fileID: 2027628713}
   - {fileID: 2140983159}

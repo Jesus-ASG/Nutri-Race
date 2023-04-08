@@ -18,18 +18,17 @@ public class SectionsDeleter : MonoBehaviour
     
     IEnumerator DeleteObjects()
     {
-        while (true)
-        {
-            string name = this.gameObject.name;
-            if (name.EndsWith("(Clone)"))
+        string name = this.gameObject.name;
+        if (name.EndsWith("(Clone)"))
+            while (true)
+            {
                 if (player.transform.position.z > zPos)
                 {
                     float zDiff = player.transform.position.z - zPos;
                     if (zDiff > deleteDistance)
                         Destroy(gameObject);
                 }
-            yield return new WaitForSeconds(1f);
-        }
-        
+                yield return new WaitForSeconds(1f);
+            }
     }
 }
